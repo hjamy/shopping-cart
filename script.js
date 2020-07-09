@@ -4,6 +4,9 @@ upBtnPhone.addEventListener("click", function () {
     const phoneCount = document.getElementById("phoneCount").value;
     const phoneCountValue = parseInt(phoneCount);
     document.getElementById("phoneCount").value = phoneCountValue + 1;
+    const phonePrice = document.getElementById("phonePrice").innerHTML;
+    const phonePriceValue = parseInt(phonePrice);
+    document.getElementById("phonePrice").innerHTML = phonePriceValue + 1219;
 })
 
 //phone down button handler
@@ -13,6 +16,9 @@ downBtnPhone.addEventListener("click", function () {
     const phoneCountValue = parseInt(phoneCount);
     if (phoneCountValue > 1) {
         document.getElementById("phoneCount").value = phoneCountValue - 1;
+        const phonePrice = document.getElementById("phonePrice").innerHTML;
+        const phonePriceValue = parseInt(phonePrice);
+        document.getElementById("phonePrice").innerHTML = phonePriceValue - 1219;
     }
 
 })
@@ -23,6 +29,9 @@ upBtnCover.addEventListener("click", function () {
     const coverCount = document.getElementById("coverCount").value;
     const coverCountValue = parseInt(coverCount);
     document.getElementById("coverCount").value = coverCountValue + 1;
+    const coverPrice = document.getElementById("coverPrice").innerHTML;
+    const coverPriceValue = parseInt(coverPrice);
+    document.getElementById("coverPrice").innerHTML = coverPriceValue + 59;
 })
 
 //cover down button handler
@@ -32,6 +41,9 @@ downBtnCover.addEventListener("click", function () {
     const coverCountValue = parseInt(coverCount);
     if (coverCountValue > 1) {
         document.getElementById("coverCount").value = coverCountValue - 1;
+        const coverPrice = document.getElementById("coverPrice").innerHTML;
+        const coverPriceValue = parseInt(coverPrice);
+        document.getElementById("coverPrice").innerHTML = coverPriceValue - 59;
     }
 
 })
