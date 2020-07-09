@@ -5,11 +5,15 @@ upBtnPhone.addEventListener("click", function () {
     const phoneCountValue = parseInt(phoneCount);
     document.getElementById("phoneCount").value = phoneCountValue + 1;
     const phonePrice = document.getElementById("phonePrice").innerHTML;
-    const phonePriceValue = parseInt(phonePrice);
-    document.getElementById("phonePrice").innerHTML = phonePriceValue + 1219;
+    const phonePriceValue = parseInt(phonePrice) + 1219;
+    document.getElementById("phonePrice").innerHTML = phonePriceValue;
     const subtotal = document.getElementById("subtotal").innerHTML;
-    const subtotalValue = parseInt(subtotal);
-    document.getElementById("subtotal").innerHTML = subtotalValue + 1219;
+    const subtotalValue = parseFloat(subtotal) + 1219;
+    document.getElementById("subtotal").innerHTML = subtotalValue;
+    document.getElementById("tax").innerHTML = subtotalValue * 1 / 10;
+    const tax = document.getElementById("tax").innerHTML;
+    const taxValue = parseFloat(tax);
+    document.getElementById("total").innerHTML = subtotalValue + taxValue;
 })
 
 //phone down button handler
@@ -20,11 +24,16 @@ downBtnPhone.addEventListener("click", function () {
     if (phoneCountValue > 1) {
         document.getElementById("phoneCount").value = phoneCountValue - 1;
         const phonePrice = document.getElementById("phonePrice").innerHTML;
-        const phonePriceValue = parseInt(phonePrice);
-        document.getElementById("phonePrice").innerHTML = phonePriceValue - 1219;
+        const phonePriceValue = parseInt(phonePrice) - 1219;
+        document.getElementById("phonePrice").innerHTML = phonePriceValue;
         const subtotal = document.getElementById("subtotal").innerHTML;
-        const subtotalValue = parseInt(subtotal);
-        document.getElementById("subtotal").innerHTML = subtotalValue - 1219;
+        const subtotalValue = parseInt(subtotal) - 1219;
+        document.getElementById("subtotal").innerHTML = subtotalValue;
+        document.getElementById("tax").innerHTML = subtotalValue * 1 / 10;
+        const tax = document.getElementById("tax").innerHTML;
+        const taxValue = parseFloat(tax);
+        document.getElementById("total").innerHTML = subtotalValue + taxValue;
+
     }
 
 })
@@ -36,11 +45,15 @@ upBtnCover.addEventListener("click", function () {
     const coverCountValue = parseInt(coverCount);
     document.getElementById("coverCount").value = coverCountValue + 1;
     const coverPrice = document.getElementById("coverPrice").innerHTML;
-    const coverPriceValue = parseInt(coverPrice);
-    document.getElementById("coverPrice").innerHTML = coverPriceValue + 59;
+    const coverPriceValue = parseInt(coverPrice) + 59;
+    document.getElementById("coverPrice").innerHTML = coverPriceValue;
     const subtotal = document.getElementById("subtotal").innerHTML;
-    const subtotalValue = parseInt(subtotal);
-    document.getElementById("subtotal").innerHTML = subtotalValue + 59;
+    const subtotalValue = parseInt(subtotal) + 59;
+    document.getElementById("subtotal").innerHTML = subtotalValue;
+    document.getElementById("tax").innerHTML = subtotalValue * 1 / 10;
+    const tax = document.getElementById("tax").innerHTML;
+    const taxValue = parseFloat(tax);
+    document.getElementById("total").innerHTML = subtotalValue + taxValue;
 })
 
 //cover down button handler
@@ -51,11 +64,15 @@ downBtnCover.addEventListener("click", function () {
     if (coverCountValue > 1) {
         document.getElementById("coverCount").value = coverCountValue - 1;
         const coverPrice = document.getElementById("coverPrice").innerHTML;
-        const coverPriceValue = parseInt(coverPrice);
-        document.getElementById("coverPrice").innerHTML = coverPriceValue - 59;
+        const coverPriceValue = parseInt(coverPrice) - 59;
+        document.getElementById("coverPrice").innerHTML = coverPriceValue;
         const subtotal = document.getElementById("subtotal").innerHTML;
-        const subtotalValue = parseInt(subtotal);
-        document.getElementById("subtotal").innerHTML = subtotalValue - 59;
+        const subtotalValue = parseInt(subtotal) - 59;
+        document.getElementById("subtotal").innerHTML = subtotalValue;
+        document.getElementById("tax").innerHTML = subtotalValue * 1 / 10;
+        const tax = document.getElementById("tax").innerHTML;
+        const taxValue = parseFloat(tax);
+        document.getElementById("total").innerHTML = subtotalValue + taxValue;
     }
 
 })
