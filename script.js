@@ -76,3 +76,44 @@ downBtnCover.addEventListener("click", function () {
     }
 
 })
+
+//checkout button handler
+const checkoutBtn = document.getElementById("checkout");
+checkoutBtn.addEventListener("click", function () {
+    const cartArea = document.getElementById("cart-area");
+    cartArea.style.display = "none";
+    const confirmationArea = document.getElementById("confirmation-area");
+    confirmationArea.style.display = "block";
+})
+
+//item1 remove handler
+const remove1Btn = document.getElementById("remove1");
+remove1Btn.addEventListener("click", function () {
+    const item1 = document.getElementById("item1");
+    const phonePrice = document.getElementById("phonePrice").innerHTML;
+    const phonePriceValue = parseInt(phonePrice);
+    const subtotal = document.getElementById("subtotal").innerHTML;
+    const subtotalValue = parseInt(subtotal);
+    const subtotalValueAfterRemoval = subtotalValue - phonePriceValue;
+    document.getElementById("subtotal").innerHTML = subtotalValueAfterRemoval;
+    const taxValue = subtotalValueAfterRemoval * 1 / 10;
+    document.getElementById("tax").innerHTML = taxValue;
+    document.getElementById("total").innerHTML = subtotalValueAfterRemoval + taxValue;
+    item1.style.display = "none";
+})
+
+//item2 remove handler
+const remove2Btn = document.getElementById("remove2");
+remove2Btn.addEventListener("click", function () {
+    const item2 = document.getElementById("item2");
+    const coverPrice = document.getElementById("coverPrice").innerHTML;
+    const coverPriceValue = parseInt(coverPrice);
+    const subtotal = document.getElementById("subtotal").innerHTML;
+    const subtotalValue = parseInt(subtotal);
+    const subtotalValueAfterRemoval = subtotalValue - coverPriceValue;
+    document.getElementById("subtotal").innerHTML = subtotalValueAfterRemoval;
+    const taxValue = subtotalValueAfterRemoval * 1 / 10;
+    document.getElementById("tax").innerHTML = taxValue;
+    document.getElementById("total").innerHTML = subtotalValueAfterRemoval + taxValue;
+    item2.style.display = "none";
+})

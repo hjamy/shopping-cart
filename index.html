@@ -12,11 +12,11 @@
 
 <body>
 
-   <section>
+   <section id="cart-area">
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div id="item1" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -30,12 +30,12 @@
                            <button id="plusPhone" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="phonePrice">1219</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img id="remove1" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div id="item2" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -49,7 +49,7 @@
 
                         </div>
                         <h5>$<span id="coverPrice">59</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <img id="remove2" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
@@ -71,12 +71,17 @@
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="checkout" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
       </div>
    </section>
+
+   <div id="confirmation-area">
+      <h1 class="text-center text-success">Congratulations!</h1>
+      <h4 class="text-center">Your order has been received, check your email for confirmation.</h4>
+   </div>
    <script src="script.js"></script>
 </body>
 
