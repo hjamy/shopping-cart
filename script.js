@@ -7,6 +7,9 @@ upBtnPhone.addEventListener("click", function () {
     const phonePrice = document.getElementById("phonePrice").innerHTML;
     const phonePriceValue = parseInt(phonePrice);
     document.getElementById("phonePrice").innerHTML = phonePriceValue + 1219;
+    const subtotal = document.getElementById("subtotal").innerHTML;
+    const subtotalValue = parseInt(subtotal);
+    document.getElementById("subtotal").innerHTML = subtotalValue + 1219;
 })
 
 //phone down button handler
@@ -19,6 +22,9 @@ downBtnPhone.addEventListener("click", function () {
         const phonePrice = document.getElementById("phonePrice").innerHTML;
         const phonePriceValue = parseInt(phonePrice);
         document.getElementById("phonePrice").innerHTML = phonePriceValue - 1219;
+        const subtotal = document.getElementById("subtotal").innerHTML;
+        const subtotalValue = parseInt(subtotal);
+        document.getElementById("subtotal").innerHTML = subtotalValue - 1219;
     }
 
 })
@@ -32,6 +38,9 @@ upBtnCover.addEventListener("click", function () {
     const coverPrice = document.getElementById("coverPrice").innerHTML;
     const coverPriceValue = parseInt(coverPrice);
     document.getElementById("coverPrice").innerHTML = coverPriceValue + 59;
+    const subtotal = document.getElementById("subtotal").innerHTML;
+    const subtotalValue = parseInt(subtotal);
+    document.getElementById("subtotal").innerHTML = subtotalValue + 59;
 })
 
 //cover down button handler
@@ -44,6 +53,9 @@ downBtnCover.addEventListener("click", function () {
         const coverPrice = document.getElementById("coverPrice").innerHTML;
         const coverPriceValue = parseInt(coverPrice);
         document.getElementById("coverPrice").innerHTML = coverPriceValue - 59;
+        const subtotal = document.getElementById("subtotal").innerHTML;
+        const subtotalValue = parseInt(subtotal);
+        document.getElementById("subtotal").innerHTML = subtotalValue - 59;
     }
 
 })
