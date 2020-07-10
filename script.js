@@ -1,13 +1,17 @@
+const basePhonePrice = 1219;
+const baseCoverPrice = 59;
+const baseTax = 10;
+
 //phone up button handler
 const upBtnPhone = document.getElementById("plusPhone");
 upBtnPhone.addEventListener("click", function () {
     const phoneCountValue = productCounterValueFetcher("phoneCount");
     document.getElementById("phoneCount").value = phoneCountValue + 1;
     const phonePrice = document.getElementById("phonePrice").innerHTML;
-    const phonePriceValue = parseInt(phonePrice) + 1219;
+    const phonePriceValue = parseInt(phonePrice) + basePhonePrice;
     document.getElementById("phonePrice").innerHTML = phonePriceValue;
     const subtotal = document.getElementById("subtotal").innerHTML;
-    const subtotalValue = parseFloat(subtotal) + 1219;
+    const subtotalValue = parseFloat(subtotal) + basePhonePrice;
     document.getElementById("subtotal").innerHTML = subtotalValue;
     calculateTax_UpadateTotal("tax", "total", subtotalValue);
 })
@@ -19,10 +23,10 @@ downBtnPhone.addEventListener("click", function () {
     if (phoneCountValue > 1) {
         document.getElementById("phoneCount").value = phoneCountValue - 1;
         const phonePrice = document.getElementById("phonePrice").innerHTML;
-        const phonePriceValue = parseInt(phonePrice) - 1219;
+        const phonePriceValue = parseInt(phonePrice) - basePhonePrice;
         document.getElementById("phonePrice").innerHTML = phonePriceValue;
         const subtotal = document.getElementById("subtotal").innerHTML;
-        const subtotalValue = parseInt(subtotal) - 1219;
+        const subtotalValue = parseInt(subtotal) - basePhonePrice;
         document.getElementById("subtotal").innerHTML = subtotalValue;
         calculateTax_UpadateTotal("tax", "total", subtotalValue);
     }
@@ -34,10 +38,10 @@ upBtnCover.addEventListener("click", function () {
     const coverCountValue = productCounterValueFetcher("coverCount");
     document.getElementById("coverCount").value = coverCountValue + 1;
     const coverPrice = document.getElementById("coverPrice").innerHTML;
-    const coverPriceValue = parseInt(coverPrice) + 59;
+    const coverPriceValue = parseInt(coverPrice) + baseCoverPrice;
     document.getElementById("coverPrice").innerHTML = coverPriceValue;
     const subtotal = document.getElementById("subtotal").innerHTML;
-    const subtotalValue = parseInt(subtotal) + 59;
+    const subtotalValue = parseInt(subtotal) + baseCoverPrice;
     document.getElementById("subtotal").innerHTML = subtotalValue;
     calculateTax_UpadateTotal("tax", "total", subtotalValue);
 })
@@ -49,10 +53,10 @@ downBtnCover.addEventListener("click", function () {
     if (coverCountValue > 1) {
         document.getElementById("coverCount").value = coverCountValue - 1;
         const coverPrice = document.getElementById("coverPrice").innerHTML;
-        const coverPriceValue = parseInt(coverPrice) - 59;
+        const coverPriceValue = parseInt(coverPrice) - baseCoverPrice;
         document.getElementById("coverPrice").innerHTML = coverPriceValue;
         const subtotal = document.getElementById("subtotal").innerHTML;
-        const subtotalValue = parseInt(subtotal) - 59;
+        const subtotalValue = parseInt(subtotal) - baseCoverPrice;
         document.getElementById("subtotal").innerHTML = subtotalValue;
         calculateTax_UpadateTotal("tax", "total", subtotalValue);
     }
@@ -65,7 +69,7 @@ function productCounterValueFetcher(productId) {
 }
 
 function calculateTax_UpadateTotal(taxId, totalId, subtotalValue) {
-    const taxValue = subtotalValue * 1 / 10;
+    const taxValue = subtotalValue / baseTax;
     document.getElementById(taxId).innerHTML = taxValue;
     document.getElementById(totalId).innerHTML = subtotalValue + taxValue;
 }
